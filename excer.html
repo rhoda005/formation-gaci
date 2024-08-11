@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercice</title>
+    </head>
+    <body>
+        <form>
+            <table>
+                <tr>
+                    <td><label>nombre1</label></td>
+                    <td><input type="number" name="nbre1" id="nbre1"></td>
+                </tr>
+                <tr>
+                    <td><label>nombre2</label></td>
+                    <td><input type="number" name="nbre2" id="nbre2"></td>
+                </tr>
+                <tr>
+                    <td><label></label></td>
+                    <td><input type="button" name="btn1" value="somme" onclick="sommation()"></td>
+                </tr>
+                <tr>
+                    <td><label>sum</label></td>
+                    <td><input type="number" name="nom" id="somme"></td>
+                </tr>
+            </table>
+        </form>
+        <script type="text/javascript">
+            function sommation(){
+                  var nombre1=parseInt(document.getElementById("nbre1").value);
+                  var nombre2=parseInt(document.getElementById("nbre2").value);
+                    document.getElementById("somme").value=nombre1+=nombre2;
+            }
+        </script>
+    </body>
+</html>

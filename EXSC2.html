@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <form>
+            <table>
+                <tr>
+                    <td><label>commentaire</label></td>
+                    <td><textarea placeholder="commenter" name="commenter"id="commentaire" oninput="TransfertTexte()"></textarea><td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="afficher" name="play" onclick="TransfertTexte()">
+                    </td>
+                </tr>
+               
+            </table>
+        </form>
+        <p id="par">     
+        </p>
+        <label id="lb">commentaire</label>
+        <script type="text/javascript">
+        function TransfertTexte(){
+            var commentaire=(document.getElementById("commentaire").value);
+            document.getElementById("par").innerHTML=commentaire;
+            document.getElementById("lb").innerHTML=commentaire;
+        }
+        </script>
+    </body>
+</html>

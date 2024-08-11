@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form>
+            <table>
+                <tr>
+                    <td>Mot de passe</td>
+                    <td><input type="password" name="pass" id="password" oninput="Testlonguer()"></td>
+                    <td><label id="size">conform-pword</label></td>
+                </tr>
+                <tr>
+                    <td>Mon de passe de confirmation</td>
+                    <td><input type="password" name="conformpassword" id="rightpass" onclick="verifier()"></td>
+                    <td><label id="correctpass" name="pword"></label></td>
+                </tr>
+            </table>
+        </form>
+        <script type="text/javascript">
+            function Testlonguer(){
+            var mdp=document.getElementById("password").value;
+                if(mdp.length<4){
+                    document.getElementById("size").innerHTML="mot de passe court";
+                    document.getElementById("size").style.color="bleu";
+                }
+                else if(mdp.length>=4 && mdp.length<9){
+                    document.getElementById("size").innerHTML="mot de passe moyen";
+                    document.getElementById("size").style.color="red";
+                }
+                else{
+                    document.getElementById("size").innerHTML="mot de passe long";
+                    document.getElementById("size").style.color="green";
+                }
+            }
+            function verifier(){
+                var mdp=document.getElementById("password").value;
+                var mdpv=document.getElementById("rightpass").value;
+                    if(mdp==mdpv){
+                        document.getElementById("correctpass").innerText="le mot de passe correspond";
+                    }
+                    else{
+                        document.getElementById("correctpass").innerText="le mot de passe ne correspond pas";
+                    }
+            }
+        </script>
+    </body>
+</html>
